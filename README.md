@@ -14,4 +14,4 @@ Output of oneplustwominusthreeone(1+2-31) will be 'negativetwoeight'(-28).
 ## Sample Input/Output by Running 
 Here is the sample output screen for this program.
 
-![Sample Output for String Expression Evaluator](/sample output.PNG)
+![Sample Output for String Expression Evaluator](https://imgur.com/2b2avk7.png)

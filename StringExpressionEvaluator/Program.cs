@@ -25,7 +25,21 @@ class StringExpressionEvaluator
                 }
                 values.Push(int.Parse(sbuf.ToString()));
             }
-            else if (tokens[i] == '+' || tokens[i] == '-')
+            else if (tokens[i] == '(')
+            {
+                ops.Push(tokens[i]);
+            }
+
+            // Closing brace encountered, solve entire brace  
+            else if (tokens[i] == ')')
+            {
+                while (ops.Peek() != '(')
+                {
+                    values.Push(applyOp(ops.Pop(), values.Pop(), values.Pop()));
+                }
+                ops.Pop();
+            }
+            else if (tokens[i] == '+' || tokens[i] == '-' || tokens[i] == '*' || tokens[i] == '/')
             {
                 while (ops.Count > 0 && hasPrecedence(tokens[i], ops.Peek()))
                 {
@@ -78,28 +92,31 @@ class StringExpressionEvaluator
 
             for (int j = 0; j < number_strings.Length; j++)
             {
+                
                 if (substr.Length >= number_strings[j].Length)
                 {
 
                     if (number_strings[j] == substr.Substring(0, number_strings[j].Length))
                     {
-
+                        
+                        isnumber = true;
                         mathexpression = mathexpression + j.ToString();
+                       
+
                         if (substr.Length == number_strings[j].Length)
                         {
+                            
                             ended = true;
                             break;
                         }
-                        if (i > 0)
+                        else if (i > 0)
                         {
-                            i = i + number_strings[i].Length - 1;
+                            i = i + number_strings[j].Length - 1;
                         }
                         else
                         {
-                            i = i + number_strings[i].Length - 2;
+                            i = i + number_strings[j].Length - 2;
                         }
-
-                        isnumber = true;
                         break;
                     }
                 }
@@ -120,6 +137,16 @@ class StringExpressionEvaluator
                 {
                     mathexpression = mathexpression + " - ";
                     i = i + 4;
+                }
+                else if(substr.Substring(0,6)=="divide")
+                {
+                    mathexpression = mathexpression + " / ";
+                    i = i + 5;
+                }
+                else if(substr.Substring(0,8)=="multiply")
+                {
+                    mathexpression = mathexpression + " * ";
+                    i = i + 7;
                 }
             }
 
@@ -146,8 +173,18 @@ class StringExpressionEvaluator
 
     static void Main()
     {
+        Console.WriteLine("----------------Instructions--------------------------");
+        Console.WriteLine("'multiply' for Mulplication (*)");
+        Console.WriteLine("'divide' for Division (/)");
+        Console.WriteLine("'plus' for Sum(+)");
+        Console.WriteLine("'minus' for Subtraction(-)");
+        Console.WriteLine("Write the expression without spaces");
+        Console.WriteLine("--------------------------------------------------------");
+        Console.Write("Enter an expression in English i.e oneplustwo for 1+2:");
+        string input = Console.ReadLine();
         // keep this function call here
-        Console.WriteLine(StringChallenge(Console.ReadLine()));
+        Console.Write("Solution of Expression: ");
+        Console.WriteLine(StringChallenge(input));
     }
 
 }

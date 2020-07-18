@@ -1,5 +1,5 @@
 # String Expression Evaluator
-String expression evaluates any expression written in English like words using DMAS Rule for evaluation.
+String expression evaluator can evaluate any expression written in alphabets using DMAS Rule for evaluation.
 It includes 4 major operators division, multiplication, addition, subtraction.
 ## Input Rules
 The input for these operators is

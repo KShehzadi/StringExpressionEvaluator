@@ -1,0 +1,13 @@
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\bin\Debug\netcoreapp3.1\StringExpressionEvaluator.exe
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\bin\Debug\netcoreapp3.1\StringExpressionEvaluator.deps.json
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\bin\Debug\netcoreapp3.1\StringExpressionEvaluator.runtimeconfig.json
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\bin\Debug\netcoreapp3.1\StringExpressionEvaluator.runtimeconfig.dev.json
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\bin\Debug\netcoreapp3.1\StringExpressionEvaluator.dll
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\bin\Debug\netcoreapp3.1\StringExpressionEvaluator.pdb
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\obj\Debug\netcoreapp3.1\StringExpressionEvaluator.csprojAssemblyReference.cache
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\obj\Debug\netcoreapp3.1\StringExpressionEvaluator.csproj.CoreCompileInputs.cache
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\obj\Debug\netcoreapp3.1\StringExpressionEvaluator.AssemblyInfoInputs.cache
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\obj\Debug\netcoreapp3.1\StringExpressionEvaluator.AssemblyInfo.cs
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\obj\Debug\netcoreapp3.1\StringExpressionEvaluator.dll
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\obj\Debug\netcoreapp3.1\StringExpressionEvaluator.pdb
+C:\Users\DC\source\repos\StringExpressionEvaluator\StringExpressionEvaluator\obj\Debug\netcoreapp3.1\StringExpressionEvaluator.genruntimeconfig.cache

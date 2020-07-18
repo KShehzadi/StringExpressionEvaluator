@@ -9,9 +9,9 @@ The input for these operators is
 'minus' for subtraction.
 Write the expression without spaces.
 Basically, you have to write the expression as you read it. For example 1+2-31 will be written as 'oneplustwominusthreeone'.
-##Output
+## Output
 Output of oneplustwominusthreeone(1+2-31) will be 'negativetwoeight'(-28).
 ## Sample Input/Output by Running 
 Here is the sample output screen for this program.
 
-![Sample Output for String Expression Evaluator](https://imgur.com/2b2avk7)
+![Sample Output for String Expression Evaluator](/sample output.PNG)

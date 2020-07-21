@@ -5,6 +5,7 @@ using System.Text;
 class StringExpressionEvaluator
 {
     static string[] number_strings = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+    // funtion to evaluate an expression like "1+2"
     public static int evaluate(string expression)
     {
         char[] tokens = expression.ToCharArray();
@@ -55,6 +56,7 @@ class StringExpressionEvaluator
         }
         return values.Pop();
     }
+    // Method to check precedence of given operators
     public static bool hasPrecedence(char op1, char op2)
     {
         if (op2 == '(' || op2 == ')')
@@ -68,6 +70,7 @@ class StringExpressionEvaluator
 
         return true;
     }
+    // Method to apply an operation on two operands
     public static int applyOp(char op, int b, int a)
     {
         switch (op)
@@ -79,6 +82,7 @@ class StringExpressionEvaluator
         }
         return 0;
     }
+    // function to change a english like expression to mathematical string expression
     public static string StringChallenge(string str)
     {
         string mathexpression = "";
@@ -151,9 +155,11 @@ class StringExpressionEvaluator
             }
 
         }
+        // evaluating mathematical expression
         int result = evaluate(mathexpression);
         string resultstr = "";
         int start = 0;
+        // transforming result in to english like words
         if (result < 0)
         {
             resultstr = resultstr + "negative";
@@ -170,21 +176,34 @@ class StringExpressionEvaluator
         return resultstr;
 
     }
+    static void Perform()
+    {
+        try
+        {
+            // All the instructions to run this appropriately
+            Console.WriteLine("----------------Instructions--------------------------");
+            Console.WriteLine("'multiply' for Mulplication (*)");
+            Console.WriteLine("'divide' for Division (/)");
+            Console.WriteLine("'plus' for Sum(+)");
+            Console.WriteLine("'minus' for Subtraction(-)");
+            Console.WriteLine("Write the expression without spaces");
+            Console.WriteLine("--------------------------------------------------------");
+            Console.Write("Enter an expression in English i.e oneplustwo for 1+2:");
+            // taking input from user
+            string input = Console.ReadLine();
+            Console.Write("Solution of Expression: ");
+            // printing result 
+            Console.WriteLine(StringChallenge(input));
+        }
+        catch
+        {
+            Console.WriteLine("Invalid Operation");
+        }
+    }
 
     static void Main()
     {
-        Console.WriteLine("----------------Instructions--------------------------");
-        Console.WriteLine("'multiply' for Mulplication (*)");
-        Console.WriteLine("'divide' for Division (/)");
-        Console.WriteLine("'plus' for Sum(+)");
-        Console.WriteLine("'minus' for Subtraction(-)");
-        Console.WriteLine("Write the expression without spaces");
-        Console.WriteLine("--------------------------------------------------------");
-        Console.Write("Enter an expression in English i.e oneplustwo for 1+2:");
-        string input = Console.ReadLine();
-        // keep this function call here
-        Console.Write("Solution of Expression: ");
-        Console.WriteLine(StringChallenge(input));
+        Perform();
     }
 
 }
